@@ -19,3 +19,5 @@ Raw: Dados brutos enviados pela aplicação Flask.
 Bronze: Dados categorizados como "Validated" ou "Rejected" após validação.
 Silver: Dados transformados e prontos para análises detalhadas.
 Gold: Dados otimizados e consolidados para análises avançadas e modelagem.
+
+Os arquivos dataset_week_1.csv e dataset_week_2.csv foram adicionados para teste no DataLake.
