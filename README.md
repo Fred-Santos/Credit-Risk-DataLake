@@ -26,8 +26,8 @@ A arquitetura é construída sobre ferramentas da AWS para garantir escalabilida
 ## Estrutura de Armazenamento
 - **Raw**: Dados brutos.
 - **Bronze**: Dados validados e categorizados.
-- **Silver**: Dados transformados e enriquecidos.
-- **Gold**: Dados otimizados para análises e modelos preditivos.
+- **Silver**: Dados tratatados e alterados para parquet.
+- **Gold**: Dados otimizados e enriquecidos para análises e modelos preditivos.
 
 ## Fluxo de Dados e Processamento
 
@@ -39,12 +39,12 @@ A arquitetura é construída sobre ferramentas da AWS para garantir escalabilida
 - **Fluxo**: AWS Lambda aciona validações e move arquivos para Bronze/Validated ou Bronze/Rejected.
 
 ### Camada Silver
-- **Objetivos**: Transformar e enriquecer dados.
-- **Fluxo**: AWS Lambda aciona transformações e organiza dados em tabelas estruturadas.
+- **Objetivos**: Tratar dados.
+- **Fluxo**: AWS Lambda aciona limpeza e tratamento e salva em parquet.
 
 ### Camada Gold
 - **Objetivos**: Consolidar dados para análises e modelos preditivos.
-- **Fluxo**: Dados extraídos da camada Silver são transformados e armazenados em tabelas analíticas.
+- **Fluxo**: Dados extraídos da camada Silver são enriquecidos, transformados e armazenados em tabelas analíticas.
 
 ## Qualidade dos Dados e Governança
 - **Garantia de Qualidade**: Validações automatizadas e limpeza de dados.
